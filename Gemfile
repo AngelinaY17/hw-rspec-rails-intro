@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.6.6'
-gem 'rails', '4.2.11'
+ruby '3.3.8'
+gem 'rails', '~>7.1.5'
 gem 'ffi', '1.14.2'
 
 gem 'sass-rails', '~> 5.0.3'
@@ -21,7 +21,7 @@ group :development, :test do
   gem 'pry-byebug'
 
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.3.6'
+  gem 'sqlite3', '~> 1.7'
 end
 
 group :production do
