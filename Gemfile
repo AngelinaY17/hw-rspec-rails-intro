@@ -9,7 +9,7 @@ gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
 gem 'bigdecimal', '1.3.5'
-gem 'web-console', '~> 2.0'
+gem 'web-console', '~> 4'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
