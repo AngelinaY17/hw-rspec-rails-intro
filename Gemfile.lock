@@ -416,6 +416,7 @@ DEPENDENCIES
   ffi (~> 1.17)
   guard-rspec
   jquery-rails
+  json (~> 2.21)
   pg (~> 1.5)
   pry
   pry-byebug
