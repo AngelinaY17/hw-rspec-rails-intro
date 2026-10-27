@@ -12,7 +12,6 @@ gem 'jquery-rails'
 gem 'bigdecimal', '~> 3.1'
 gem 'web-console', '~> 4'
 gem 'faraday', '1.8.0'
-gem 'json', '~> 2.9'
 
 
 # for Heroku deployment - as described in Ap. A of ELLS book
