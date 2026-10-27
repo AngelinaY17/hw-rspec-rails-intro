@@ -34,4 +34,6 @@ end
 group :test do
   gem 'rails-controller-testing'
   gem 'guard-rspec'                 # automates re-running tests
+  gem 'webmock'
 end
+
