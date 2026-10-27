@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'bigdecimal', '~> 3.1'
 gem 'web-console', '~> 4'
 gem 'faraday', '1.8.0'
+gem 'json', '~> 2.9'
 
 
 # for Heroku deployment - as described in Ap. A of ELLS book
@@ -28,7 +29,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.2'
+  gem 'pg', '~> 1.5'
   gem 'rails_12factor'
 end
 
