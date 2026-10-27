@@ -2,14 +2,14 @@ source 'https://rubygems.org'
 
 ruby '3.3.8'
 gem 'rails', '~>7.1.5'
-gem 'ffi', '~> 1.17'
+gem 'ffi', '1.14.2'
 gem 'sprockets', '~> 4.2'
 
-gem 'sass-rails', '~> 6.0'
+gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
-gem 'bigdecimal', '~> 3.1'
+gem 'bigdecimal', '1.3.5'
 gem 'web-console', '~> 4'
 gem 'faraday', '1.8.0'
 
