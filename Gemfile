@@ -2,14 +2,16 @@ source 'https://rubygems.org'
 
 ruby '3.3.8'
 gem 'rails', '~>7.1.5'
-gem 'ffi', '1.14.2'
+gem 'ffi', '~> 1.17'
 
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
-gem 'bigdecimal', '1.3.5'
+gem 'bigdecimal', '~> 3.1'
 gem 'web-console', '~> 4'
+gem 'faraday', '1.8.0'
+
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
@@ -27,4 +29,9 @@ end
 group :production do
   gem 'pg', '~> 0.2'
   gem 'rails_12factor'
+end
+
+group :test do
+  gem 'rails-controller-testing'
+  gem 'guard-rspec'                 # automates re-running tests
 end
