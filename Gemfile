@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 ruby '3.3.8'
 gem 'rails', '~>7.1.5'
 gem 'ffi', '~> 1.17'
+gem 'sprockets', '~> 4.2'
 
-gem 'sass-rails', '~> 5.0.3'
+gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
