@@ -16,6 +16,8 @@ class Movie < ActiveRecord::Base
     year = search_params[:release_year]
     language = search_params[:language]
 
+    raise 'TMDb API key is missing' if api_key.blank?
+
     query_params = {
       api_key: api_key,
       query: title,
@@ -29,11 +31,21 @@ class Movie < ActiveRecord::Base
       query_params
     )
 
-    raise 'TMDb request failed' unless response.success?
+    unless response.success?
+      Rails.logger.error(
+        "TMDb request failed: HTTP #{response.status} - #{response.body}"
+      )
+      raise "TMDb request failed with status #{response.status}"
+    end
 
     results = JSON.parse(response.body).fetch('results', [])
 
-    results.map do |result|
+    results.filter_map do |result|
+      next if Movie.exists?(
+        title: result['title'],
+        release_date: result['release_date'].presence
+      )
+
       Movie.new(
         title: result['title'],
         description: result['overview'],
