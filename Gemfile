@@ -13,6 +13,8 @@ gem 'bigdecimal', '~> 3.1'
 gem 'web-console', '~> 4'
 gem 'faraday', '1.8.0'
 gem 'json', '~> 2.21'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '~> 1.7'
 
 
 # for Heroku deployment - as described in Ap. A of ELLS book
@@ -23,9 +25,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry'
   gem 'pry-byebug'
-
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.7'
 end
 
 group :production do
